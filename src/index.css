@@ -1,0 +1,411 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #009EF7;
+  --theme-primary-hover: #0086D1;
+  --theme-accent: #50CD89;
+  --logo-gradient-from: #E91E63;
+  --logo-gradient-to: #9C27B0;
+  --theme-bg: #0F1014;
+  --theme-card: #14151C;
+  --theme-sidebar: #111217;
+}
+
+@theme {
+  --color-sigma-bg: #0F1014;
+  --color-sigma-card: #1E1E2D;
+  --color-sigma-cardHover: #232336;
+  --color-sigma-border: #2B2B40;
+  --color-sigma-darker: #151521;
+  --color-sigma-primary: #009EF7;
+  --color-sigma-primaryHover: #0086D1;
+  --color-sigma-success: #50CD89;
+  --color-sigma-warning: #FFC700;
+  --color-sigma-danger: #F1416C;
+  --color-sigma-info: #7239EA;
+  --color-sigma-cyan: #00D2FF;
+  --color-sigma-text: #FFFFFF;
+  --color-sigma-textMuted: #92929F;
+  --color-sigma-textSub: #6D6D80;
+}
+
+body {
+  background-color: var(--theme-bg, #0F1014);
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Dynamic theme classes that respond to franchise configuration */
+.bg-theme-primary {
+  background-color: var(--theme-primary, #009EF7) !important;
+}
+
+.text-theme-primary {
+  color: var(--theme-primary, #009EF7) !important;
+}
+
+.border-theme-primary {
+  border-color: var(--theme-primary, #009EF7) !important;
+}
+
+.logo-gradient-box {
+  background: linear-gradient(135deg, var(--logo-gradient-from, #E91E63), var(--logo-gradient-to, #9C27B0)) !important;
+}
+
+/* Universal dynamic overrides that automatically adapt all hardcoded colors across the panel */
+[class~="bg-[#009EF7]"],
+.bg-sigma-primary {
+  background-color: var(--theme-primary, #009EF7) !important;
+}
+
+[class~="text-[#009EF7]"],
+.text-sigma-primary {
+  color: var(--theme-primary, #009EF7) !important;
+}
+
+[class~="border-[#009EF7]"],
+.border-sigma-primary {
+  border-color: var(--theme-primary, #009EF7) !important;
+}
+
+[class*="hover:bg-[#0086D1]"]:hover,
+[class*="hover:bg-[#0095E8]"]:hover,
+.hover\:bg-sigma-primaryHover:hover {
+  background-color: var(--theme-primary-hover, #0086D1) !important;
+}
+
+[class*="hover:text-[#009EF7]"]:hover,
+.hover\:text-sigma-primary:hover {
+  color: var(--theme-primary, #009EF7) !important;
+}
+
+[class*="focus:border-[#009EF7]"]:focus {
+  border-color: var(--theme-primary, #009EF7) !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #111217;
+}
+::-webkit-scrollbar-thumb {
+  background: #232530;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary, #009EF7);
+}
+
+/* Mobile utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   XTREAM SERVER CLASSIC THEME (100% COMPLETE TRANSFORMATION)
+   ══════════════════════════════════════════════════════════════════════════════ */
+html.theme-xtream-classic {
+  --theme-bg: #f4f6f9;
+  --theme-card: #ffffff;
+  --theme-sidebar: #222831;
+}
+
+html:is(.theme-xtream-classic, .theme-default).mode-light body {
+  background-color: var(--theme-bg, #f4f6f9) !important;
+  color: #2c3e50 !important;
+}
+
+/* Transform all primary cards and containers into crisp clean white boxes */
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#14151C]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1E1E2D]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#111319]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#151521]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1C2030]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#0F1014]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#111217]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#12141C]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#101117]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#181A24]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#0E1015]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#0E1017]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main .bg-sigma-card,
+html:is(.theme-xtream-classic, .theme-default).mode-light main .bg-sigma-darker,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="bg-[#14151C]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="bg-[#1E1E2D]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="bg-[#111319]"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #2c3e50 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Transform nested boxes, secondary badges and sub-containers into clean light gray */
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1A1C24]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#16171F]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#161720]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#161722]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1C1E28]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1C1E29]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1C1E2B]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#1F212D]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#222430]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#232530]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#252834]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#272A38]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#2A2C3C]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#2B2B40]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#2B2D3D]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#2c2e3d]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="bg-[#32324D]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="bg-[#1A1C24]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="bg-[#16171F]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="bg-[#232530]"] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* Hover states for nested buttons/items */
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="hover:bg-[#1A1C24]"]:hover,
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="hover:bg-[#232530]"]:hover,
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="hover:bg-[#16171F]"]:hover,
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="hover:bg-[#252834]"]:hover,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="hover:bg-[#1A1C24]"]:hover,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="hover:bg-[#232530]"]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Transform dark borders into clean subtle borders */
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#1E202B]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#1B1D24]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#232530]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#2B2B40]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#2E3244]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#32374A]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#262833]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#3F4254]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light main [class*="border-[#1C1F2B]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="border-[#1E202B]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="border-[#232530]"],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed [class*="border-[#2B2B40]"] {
+  border-color: #e2e8f0 !important;
+}
+
+/* Transform dark inputs and search bars across all pages and modals */
+html:is(.theme-xtream-classic, .theme-default).mode-light main input:not([type="checkbox"]):not([type="radio"]),
+html:is(.theme-xtream-classic, .theme-default).mode-light main select,
+html:is(.theme-xtream-classic, .theme-default).mode-light main textarea,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed input:not([type="checkbox"]):not([type="radio"]),
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed select,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+html:is(.theme-xtream-classic, .theme-default).mode-light main input::placeholder,
+html:is(.theme-xtream-classic, .theme-default).mode-light main textarea::placeholder,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed input::placeholder,
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Transform text colors for light background inside main and modals */
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-white:not([class*="bg-"]):not(button):not(a),
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed .text-white:not([class*="bg-"]):not(button):not(a) {
+  color: #1e293b !important;
+}
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-\[\#92929F\],
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-\[\#7E8299\],
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-\[\#5E6278\],
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-\[\#6D6D80\],
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-\[\#A1A5B7\],
+html:is(.theme-xtream-classic, .theme-default).mode-light main .text-\[\#B5B5C3\],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed .text-\[\#92929F\],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed .text-\[\#7E8299\],
+html:is(.theme-xtream-classic, .theme-default).mode-light .fixed .text-\[\#5E6278\] {
+  color: #64748b !important;
+}
+
+/* Classic Solid Stat Cards */
+.xtream-stat-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 18px 16px;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.xtream-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+.xtream-stat-card .stat-icon {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  opacity: 0.9;
+}
+.xtream-stat-card .stat-content {
+  margin-left: 56px;
+}
+.xtream-stat-card .stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+.xtream-stat-card .stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 4px;
+  line-height: 1;
+}
+
+/* Classic White Content Box */
+.xtream-white-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MODO CLARO DO SIGMA PRO: barra lateral e topo também ficam claros
+   (a barra lateral Xtream mantém as cores definidas pelo master)
+   ══════════════════════════════════════════════════════════════════════════════ */
+html.theme-default.mode-light aside[data-sidebar="sigma"],
+html.theme-default.mode-light header,
+html.theme-default.mode-light nav.fixed {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="bg-[#14151C]"],
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="bg-[#1A1C24]"],
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="bg-[#111217]"],
+html.theme-default.mode-light header [class*="bg-[#14151C]"],
+html.theme-default.mode-light header [class*="bg-[#1A1C24]"],
+html.theme-default.mode-light header [class*="bg-[#16171F]"] {
+  background-color: #f1f5f9 !important;
+}
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="border-[#1B1D24]"],
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="border-[#1E202B]"],
+html.theme-default.mode-light header [class*="border-[#1B1D24]"],
+html.theme-default.mode-light header [class*="border-[#232530]"] {
+  border-color: #e2e8f0 !important;
+}
+html.theme-default.mode-light aside[data-sidebar="sigma"] .text-white:not([class*="bg-"]):not(.logo-gradient-box),
+html.theme-default.mode-light header .text-white:not([class*="bg-"]) {
+  color: #1e293b !important;
+}
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="hover:text-white"]:hover,
+html.theme-default.mode-light header [class*="hover:text-white"]:hover {
+  color: #0f172a !important;
+}
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="hover:bg-[#1A1C24]"]:hover,
+html.theme-default.mode-light aside[data-sidebar="sigma"] [class*="hover:bg-[#16171F]"]:hover,
+html.theme-default.mode-light header [class*="hover:bg-[#16171F]"]:hover,
+html.theme-default.mode-light header [class*="hover:bg-[#1A1C24]"]:hover {
+  background-color: #f1f5f9 !important;
+}
+html.theme-default.mode-light { color-scheme: light; }
+html.theme-default.mode-light body { color: #1e293b !important; }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MODO ESCURO DO XTREAM CLÁSSICO: as telas usam o fundo escuro definido pelo master
+   (as classes claras do tema clássico são remapeadas para tons escuros derivados do fundo)
+   ══════════════════════════════════════════════════════════════════════════════ */
+html.theme-xtream-classic.mode-dark { color-scheme: dark; }
+html.theme-xtream-classic.mode-dark body {
+  background-color: var(--theme-bg, #12151b) !important;
+  color: #e5e7eb !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class~="bg-white"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) .xtream-white-box {
+  background-color: color-mix(in srgb, var(--theme-bg, #12151b) 90%, white) !important;
+  border-color: color-mix(in srgb, var(--theme-bg, #12151b) 80%, white) !important;
+  color: #e5e7eb !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="bg-[#fafbfc]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="bg-[#f8f9fa]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="bg-gray-50"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class~="bg-gray-100"] {
+  background-color: color-mix(in srgb, var(--theme-bg, #12151b) 93%, white) !important;
+  color: #e5e7eb !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="hover:bg-gray-"]:hover,
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="hover:bg-red-50"]:hover {
+  background-color: color-mix(in srgb, var(--theme-bg, #12151b) 85%, white) !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="border-gray-"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="border-[#ced4da]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="border-[#e"] {
+  border-color: color-mix(in srgb, var(--theme-bg, #12151b) 80%, white) !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-9"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-8"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-7"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#2c3e50]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#495057]"] {
+  color: #e5e7eb !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-6"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-5"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#6c757d]"] {
+  color: #9ca3af !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-4"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-gray-3"] {
+  color: #6b7280 !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) input:not([type="checkbox"]):not([type="radio"]),
+html.theme-xtream-classic.mode-dark :is(main, .fixed) select,
+html.theme-xtream-classic.mode-dark :is(main, .fixed) textarea {
+  background-color: color-mix(in srgb, var(--theme-bg, #12151b) 94%, white);
+  border-color: color-mix(in srgb, var(--theme-bg, #12151b) 78%, white);
+  color: #e5e7eb;
+}
+
+/* Xtream escuro: cobre cores de texto/linhas do tema claro que ainda ficavam escuras ou brancas */
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#212529]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#343a40]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#333"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#444"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-slate-9"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-slate-8"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-slate-7"] {
+  color: #e5e7eb !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#adb5bd]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-slate-6"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-slate-5"] {
+  color: #9ca3af !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="divide-gray-"] > :not([hidden]) ~ :not([hidden]),
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="divide-slate-"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: color-mix(in srgb, var(--theme-bg, #12151b) 88%, white) !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="border-b"][class*="border-gray-"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="border-t"][class*="border-gray-"] {
+  border-color: color-mix(in srgb, var(--theme-bg, #12151b) 88%, white) !important;
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) table tr {
+  border-color: color-mix(in srgb, var(--theme-bg, #12151b) 88%, white);
+}
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#0073b7]"],
+html.theme-xtream-classic.mode-dark :is(main, .fixed) [class*="text-[#008cb0]"] {
+  color: #38bdf8 !important;
+}

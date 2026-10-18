@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/fastcdn-api/:path*",
+      "destination": "https://fastcdn.fit/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
