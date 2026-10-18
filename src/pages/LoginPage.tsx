@@ -100,22 +100,22 @@ export const LoginPage: React.FC = () => {
 
   const variant: LoginVariant = (['classic', 'minimal', 'split', 'glass', 'xtream', 'vibrant'] as const).includes(brand.loginTheme as LoginVariant)
     ? (brand.loginTheme as LoginVariant)
-    : 'classic';
+    : 'glass';
 
   // Cores definidas pelo master
   const isXtreamBrand = brand.themeStyle === 'xtream-classic';
-  const accent = (isXtreamBrand ? brand.xtreamPrimaryColor : brand.primaryColor) || APP_CONFIG.primaryColor || '#009EF7';
-  const darkBg = brand.backgroundColor || '#0F1014';
-  const darkCard = brand.cardColor || '#14151C';
+  const accent = (isXtreamBrand ? brand.xtreamPrimaryColor : brand.primaryColor) || APP_CONFIG.primaryColor || '#E50914';
+  const darkBg = brand.backgroundColor || '#070709';
+  const darkCard = brand.cardColor || '#121217';
 
   const palettes: Record<LoginVariant, LoginPalette> = {
     classic: {
-      light: false, pageBg: darkBg, cardBg: darkCard, cardBorder: '#1E202B', text: '#ffffff', muted: '#92929F',
-      inputBg: '#1A1C24', inputBorder: '#232530', accent, accentText: readableOn(accent)
+      light: false, pageBg: '#070709', cardBg: '#121217', cardBorder: '#232330', text: '#ffffff', muted: '#8C8C9A',
+      inputBg: '#0D0D12', inputBorder: '#232330', accent, accentText: '#ffffff'
     },
     glass: {
-      light: false, pageBg: darkBg, cardBg: 'rgba(255,255,255,0.05)', cardBorder: 'rgba(255,255,255,0.12)', text: '#ffffff', muted: '#a1a1b5',
-      inputBg: 'rgba(255,255,255,0.06)', inputBorder: 'rgba(255,255,255,0.14)', accent, accentText: readableOn(accent)
+      light: false, pageBg: '#070709', cardBg: 'rgba(18,18,23,0.85)', cardBorder: 'rgba(229,9,20,0.3)', text: '#ffffff', muted: '#8C8C9A',
+      inputBg: 'rgba(10,10,14,0.7)', inputBorder: 'rgba(255,255,255,0.1)', accent, accentText: '#ffffff'
     },
     split: {
       light: false, pageBg: darkBg, cardBg: 'transparent', cardBorder: 'transparent', text: '#ffffff', muted: '#92929F',
@@ -467,15 +467,21 @@ export const LoginPage: React.FC = () => {
 
       <div className="w-full max-w-sm sm:max-w-md relative z-10">
         <div className="text-center mb-6 sm:mb-8">
-          <div className="mb-3"><Logo /></div>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-red-500/15 text-[#FF4D55] border border-red-500/30 mb-3 shadow-[0_0_15px_rgba(229,9,20,0.3)]">
+            <span>🍿 MEGA TV PRO • CINEMA & STREAMING</span>
+          </div>
+          <div className="mb-3 relative inline-block">
+            <div className="absolute inset-0 bg-[#E50914]/25 blur-2xl rounded-full scale-125"></div>
+            <div className="relative"><Logo /></div>
+          </div>
           <h1 className="text-xl sm:text-2xl font-black tracking-tight" style={{ color: p.text }}>{brand.appName}</h1>
-          <p className="text-xs mt-1 font-medium" style={{ color: p.muted }}>
+          <p className="text-xs mt-1 font-medium text-[#8C8C9A]">
             {brand.brandSlogan || 'Painel Administrativo & Gestão de Revendas'}
           </p>
         </div>
 
         <div
-          className={`rounded-2xl p-6 sm:p-8 space-y-5 border ${p.light ? 'shadow-xl' : 'shadow-2xl'} ${variant === 'glass' ? 'backdrop-blur-xl' : ''}`}
+          className={`rounded-2xl p-6 sm:p-8 space-y-5 border ${p.light ? 'shadow-xl' : 'shadow-2xl'} ${variant === 'glass' ? 'backdrop-blur-xl mega-glass-card' : ''}`}
           style={{ backgroundColor: p.cardBg, borderColor: p.cardBorder }}
         >
           <div className="pb-4 border-b" style={{ borderColor: p.cardBorder }}>
@@ -488,6 +494,19 @@ export const LoginPage: React.FC = () => {
             </p>
           </div>
           {form}
+        </div>
+
+        {/* Quick Portal Switcher to Web Player */}
+        <div className="mt-4 text-center">
+          <a
+            href={brand.webPlayerUrl || 'https://megatv.lol'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs text-red-400 hover:text-white font-medium hover:underline transition-colors"
+          >
+            <span>📺 Abrir Web Player & Smart TV (megatv.lol)</span>
+            <span>→</span>
+          </a>
         </div>
 
         {footer}

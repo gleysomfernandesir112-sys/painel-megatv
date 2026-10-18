@@ -129,6 +129,58 @@ export const Dashboard: React.FC = () => {
       {/* Gamification / Ranking Banner */}
       <DashboardGamificationBanner rankingData={rankingData} />
 
+      {/* MEGA TV Cinema Command Banner */}
+      <div className="relative overflow-hidden rounded-2xl border border-red-500/20 bg-gradient-to-r from-[#14141B] via-[#0E0E14] to-[#1A0A0D] p-4 sm:p-5 shadow-[0_8px_30px_rgb(0,0,0,0.5)]">
+        {/* Atmospheric Red Halo */}
+        <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-[#E50914]/20 blur-3xl pointer-events-none"></div>
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#E50914] to-[#8B0000] p-1 shadow-[0_0_20px_rgba(229,9,20,0.4)] flex items-center justify-center shrink-0">
+              <img src={brand.logoImageUrl || 'https://megatv.lol/icons/logo.png'} alt="MEGA TV" className="w-10 h-10 object-contain drop-shadow" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-white font-black text-base tracking-tight sm:text-lg">
+                  {brand.appName || 'MEGA TV PRO'}
+                </span>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#E50914] text-white shadow-[0_0_10px_rgba(229,9,20,0.6)]">
+                  Painel Oficial
+                </span>
+              </div>
+              <p className="text-xs text-[#8C8C9A] mt-0.5">
+                Central de streaming, gestão de testes e controle de assinaturas em tempo real.
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Action Pills */}
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={() => setQuickTestOpen(true)}
+              className="px-3.5 py-2 rounded-xl bg-[#E50914] hover:bg-[#FF1E27] text-white text-xs font-bold flex items-center gap-1.5 shadow-[0_0_15px_rgba(229,9,20,0.4)] transition-all cursor-pointer"
+            >
+              <UserPlus className="w-3.5 h-3.5" />
+              <span>+ Criar Teste</span>
+            </button>
+            <Link
+              to="/customers/add"
+              className="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold flex items-center gap-1.5 border border-white/10 transition-all"
+            >
+              <span>+ Novo Cliente</span>
+            </Link>
+            <a
+              href={brand.webPlayerUrl || 'https://megatv.lol'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded-xl bg-black/60 hover:bg-[#E50914]/20 border border-red-500/30 text-red-400 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-all"
+              title="Abrir WebPlayer / Smart TV em megatv.lol"
+            >
+              <span>📺 megatv.lol</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Main Top Controls: Period Buttons & Toggle Clientes/Revendas */}
       <div className="space-y-2 pt-0.5">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5">
@@ -137,7 +189,7 @@ export const Dashboard: React.FC = () => {
             <button
               onClick={() => setPeriod('mes_atual')}
               className={`px-3 py-1.5 rounded-lg font-medium text-xs whitespace-nowrap transition-all ${
-                period === 'mes_atual' ? 'bg-[#009EF7] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
+                period === 'mes_atual' ? 'bg-[#E50914] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
               }`}
             >
               Mês atual
@@ -145,7 +197,7 @@ export const Dashboard: React.FC = () => {
             <button
               onClick={() => setPeriod('ultimos_30')}
               className={`px-3 py-1.5 rounded-lg font-medium text-xs whitespace-nowrap transition-all ${
-                period === 'ultimos_30' ? 'bg-[#009EF7] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
+                period === 'ultimos_30' ? 'bg-[#E50914] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
               }`}
             >
               Últimos 30 dias
@@ -153,7 +205,7 @@ export const Dashboard: React.FC = () => {
             <button
               onClick={() => setPeriod('mes_passado')}
               className={`px-3 py-1.5 rounded-lg font-medium text-xs whitespace-nowrap transition-all ${
-                period === 'mes_passado' ? 'bg-[#009EF7] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
+                period === 'mes_passado' ? 'bg-[#E50914] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
               }`}
             >
               Mês passado
@@ -161,7 +213,7 @@ export const Dashboard: React.FC = () => {
             <button
               onClick={() => setPeriod('personalizado')}
               className={`px-3 py-1.5 rounded-lg font-medium text-xs whitespace-nowrap transition-all flex items-center gap-1.5 ${
-                period === 'personalizado' ? 'bg-[#009EF7] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
+                period === 'personalizado' ? 'bg-[#E50914] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
               }`}
             >
               <Calendar className="w-3.5 h-3.5" />
@@ -178,7 +230,7 @@ export const Dashboard: React.FC = () => {
               <button
                 onClick={() => setViewType('clientes')}
                 className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg font-medium text-xs transition-all text-center ${
-                  viewType === 'clientes' ? 'bg-[#009EF7] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
+                  viewType === 'clientes' ? 'bg-[#E50914] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
                 }`}
               >
                 Clientes ({totalClients})
@@ -186,7 +238,7 @@ export const Dashboard: React.FC = () => {
               <button
                 onClick={() => setViewType('revendas')}
                 className={`flex-1 sm:flex-initial px-3.5 py-1.5 rounded-lg font-medium text-xs transition-all text-center ${
-                  viewType === 'revendas' ? 'bg-[#009EF7] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
+                  viewType === 'revendas' ? 'bg-[#E50914] text-white shadow-xs font-semibold' : 'text-[#92929F] hover:text-white'
                 }`}
               >
                 Revendas ({totalSubresellers})

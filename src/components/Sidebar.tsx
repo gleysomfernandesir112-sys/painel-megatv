@@ -820,7 +820,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Top User & Balance Bar (Pinned at top below logo - Always visible) */}
       <div className="px-4 py-2.5 bg-black/20 border-b border-[#1B1D24] flex items-center justify-between gap-2 shrink-0">
         <div className="flex items-center gap-2 min-w-0">
-          <div className="w-7 h-7 rounded-lg bg-[#009EF7]/20 border border-[#009EF7]/30 flex items-center justify-center text-[#009EF7] font-bold text-xs shrink-0">
+          <div className="w-7 h-7 rounded-lg bg-[#E50914]/20 border border-[#E50914]/30 flex items-center justify-center text-[#E50914] font-bold text-xs shrink-0">
             {profile.username ? profile.username.charAt(0).toUpperCase() : 'U'}
           </div>
           <div className="min-w-0 leading-tight">
@@ -858,7 +858,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
                   isActive
-                    ? 'bg-[#009EF7] text-white shadow-md shadow-blue-500/20'
+                    ? 'bg-[#E50914] text-white shadow-md shadow-[0_0_15px_rgba(229,9,20,0.35)]'
                     : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
@@ -872,7 +872,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -885,7 +885,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -906,7 +906,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -919,11 +919,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
-              <Zap className="w-4 h-4 text-[#009EF7]" />
+              <Zap className="w-4 h-4 text-[#E50914]" />
               <span>Criar Cliente / Teste</span>
             </NavLink>
 
@@ -932,7 +932,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -945,7 +945,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -958,7 +958,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -971,7 +971,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -992,7 +992,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={handleLinkClick}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                    isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                   }`
                 }
               >
@@ -1005,7 +1005,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={handleLinkClick}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                    isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                   }`
                 }
               >
@@ -1018,7 +1018,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={handleLinkClick}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                    isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                   }`
                 }
               >
@@ -1031,7 +1031,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={handleLinkClick}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                    isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                   }`
                 }
               >
@@ -1058,7 +1058,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1072,7 +1072,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1086,7 +1086,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1100,11 +1100,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
-              <CreditCard className="w-4 h-4 text-[#009EF7]" />
+              <CreditCard className="w-4 h-4 text-[#E50914]" />
               <span>Cobrança & PIX Automático</span>
             </NavLink>
 
@@ -1114,7 +1114,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1128,7 +1128,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1151,7 +1151,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 onClick={handleLinkClick}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                    isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                    isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                   }`
                 }
               >
@@ -1168,7 +1168,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   onClick={handleLinkClick}
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                      isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                      isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                     }`
                   }
                 >
@@ -1181,7 +1181,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   onClick={handleLinkClick}
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                      isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                      isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                     }`
                   }
                 >
@@ -1194,11 +1194,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   onClick={handleLinkClick}
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                      isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                      isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                     }`
                   }
                 >
-                  <Globe className="w-4 h-4 text-[#009EF7]" />
+                  <Globe className="w-4 h-4 text-[#E50914]" />
                   <span>Domínio Personalizado</span>
                 </NavLink>
               </>
@@ -1209,7 +1209,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1223,7 +1223,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={handleLinkClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded-lg text-xs font-medium transition-all ${
-                  isActive ? 'bg-[#009EF7] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
+                  isActive ? 'bg-[#E50914] text-white' : 'text-[#92929F] hover:text-white hover:bg-[#16171F]'
                 }`
               }
             >
@@ -1231,6 +1231,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <span>Segurança da Conta</span>
             </NavLink>
           </div>
+        </div>
+
+        {/* WEPLAYER TV PORTAL SHORTCUT */}
+        <div className="pt-2">
+          <a
+            href={brand.webPlayerUrl || 'https://megatv.lol'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-[#E50914]/15 to-[#8B0000]/10 border border-red-500/30 text-white hover:border-[#E50914] hover:bg-[#E50914]/25 transition-all text-xs font-bold group shadow-[0_0_15px_rgba(229,9,20,0.15)]"
+          >
+            <div className="flex items-center gap-2.5">
+              <Tv className="w-4 h-4 text-[#FF4D55] group-hover:scale-110 transition-transform" />
+              <span>WebPlayer Smart TV</span>
+            </div>
+            <span className="text-[10px] text-red-400 group-hover:text-white font-mono">megatv.lol ↗</span>
+          </a>
         </div>
       </div>
 

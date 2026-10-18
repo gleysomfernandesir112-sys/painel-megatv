@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --theme-primary: #009EF7;
-  --theme-primary-hover: #0086D1;
-  --theme-accent: #50CD89;
-  --logo-gradient-from: #E91E63;
-  --logo-gradient-to: #9C27B0;
-  --theme-bg: #0F1014;
-  --theme-card: #14151C;
-  --theme-sidebar: #111217;
+  --theme-primary: #E50914;
+  --theme-primary-hover: #B20710;
+  --theme-accent: #FF1E27;
+  --logo-gradient-from: #E50914;
+  --logo-gradient-to: #8B0000;
+  --theme-bg: #070709;
+  --theme-card: #121217;
+  --theme-sidebar: #0A0A0D;
 }
 
 @theme {
-  --color-sigma-bg: #0F1014;
-  --color-sigma-card: #1E1E2D;
-  --color-sigma-cardHover: #232336;
-  --color-sigma-border: #2B2B40;
-  --color-sigma-darker: #151521;
-  --color-sigma-primary: #009EF7;
-  --color-sigma-primaryHover: #0086D1;
-  --color-sigma-success: #50CD89;
+  --color-sigma-bg: #070709;
+  --color-sigma-card: #121217;
+  --color-sigma-cardHover: #1A1A24;
+  --color-sigma-border: #232330;
+  --color-sigma-darker: #0A0A0D;
+  --color-sigma-primary: #E50914;
+  --color-sigma-primaryHover: #B20710;
+  --color-sigma-success: #10B981;
   --color-sigma-warning: #FFC700;
-  --color-sigma-danger: #F1416C;
+  --color-sigma-danger: #E50914;
   --color-sigma-info: #7239EA;
   --color-sigma-cyan: #00D2FF;
   --color-sigma-text: #FFFFFF;
-  --color-sigma-textMuted: #92929F;
-  --color-sigma-textSub: #6D6D80;
+  --color-sigma-textMuted: #8C8C9A;
+  --color-sigma-textSub: #5A5A68;
 }
 
 body {
-  background-color: var(--theme-bg, #0F1014);
+  background-color: var(--theme-bg, #070709);
   color: #FFFFFF;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   margin: 0;
@@ -39,52 +39,93 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* MEGA TV Cinema Glow & Glass Utilities */
+.mega-cinema-bg {
+  background-color: #070709;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(229, 9, 20, 0.22), transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(229, 9, 20, 0.08), transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(229, 9, 20, 0.06), transparent 50%);
+}
+
+.mega-glass-card {
+  background: rgba(18, 18, 23, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.mega-glass-card:hover {
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.65), 0 0 25px rgba(229, 9, 20, 0.18);
+}
+
+.mega-glow-button {
+  background: linear-gradient(135deg, #E50914 0%, #B20710 100%);
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mega-glow-button:hover {
+  background: linear-gradient(135deg, #FF1E27 0%, #E50914 100%);
+  box-shadow: 0 6px 28px rgba(229, 9, 20, 0.65);
+  transform: translateY(-1px);
+}
+
+.mega-badge-live {
+  background: rgba(229, 9, 20, 0.15);
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  color: #FF4D55;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.25);
+}
+
 /* Dynamic theme classes that respond to franchise configuration */
 .bg-theme-primary {
-  background-color: var(--theme-primary, #009EF7) !important;
+  background-color: var(--theme-primary, #E50914) !important;
 }
 
 .text-theme-primary {
-  color: var(--theme-primary, #009EF7) !important;
+  color: var(--theme-primary, #E50914) !important;
 }
 
 .border-theme-primary {
-  border-color: var(--theme-primary, #009EF7) !important;
+  border-color: var(--theme-primary, #E50914) !important;
 }
 
 .logo-gradient-box {
-  background: linear-gradient(135deg, var(--logo-gradient-from, #E91E63), var(--logo-gradient-to, #9C27B0)) !important;
+  background: linear-gradient(135deg, var(--logo-gradient-from, #E50914), var(--logo-gradient-to, #8B0000)) !important;
 }
 
 /* Universal dynamic overrides that automatically adapt all hardcoded colors across the panel */
 [class~="bg-[#009EF7]"],
 .bg-sigma-primary {
-  background-color: var(--theme-primary, #009EF7) !important;
+  background-color: var(--theme-primary, #E50914) !important;
 }
 
 [class~="text-[#009EF7]"],
 .text-sigma-primary {
-  color: var(--theme-primary, #009EF7) !important;
+  color: var(--theme-primary, #E50914) !important;
 }
 
 [class~="border-[#009EF7]"],
 .border-sigma-primary {
-  border-color: var(--theme-primary, #009EF7) !important;
+  border-color: var(--theme-primary, #E50914) !important;
 }
 
 [class*="hover:bg-[#0086D1]"]:hover,
 [class*="hover:bg-[#0095E8]"]:hover,
 .hover\:bg-sigma-primaryHover:hover {
-  background-color: var(--theme-primary-hover, #0086D1) !important;
+  background-color: var(--theme-primary-hover, #B20710) !important;
 }
 
 [class*="hover:text-[#009EF7]"]:hover,
 .hover\:text-sigma-primary:hover {
-  color: var(--theme-primary, #009EF7) !important;
+  color: var(--theme-primary, #E50914) !important;
 }
 
 [class*="focus:border-[#009EF7]"]:focus {
-  border-color: var(--theme-primary, #009EF7) !important;
+  border-color: var(--theme-primary, #E50914) !important;
 }
 
 /* Custom Scrollbars */

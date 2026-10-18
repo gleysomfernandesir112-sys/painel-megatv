@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bell, Moon, Maximize2, Settings, RefreshCw, Menu, ShieldCheck, Sparkles, LogOut, Wallet } from 'lucide-react';
+import { Bell, Moon, Maximize2, Settings, RefreshCw, Menu, ShieldCheck, Sparkles, LogOut, Wallet, Tv } from 'lucide-react';
 import { useSigmaStore } from '../store/SigmaStore';
 import { useBrandConfig } from '../config/appConfig';
 import { apiService } from '../services/apiService';
@@ -92,9 +92,15 @@ export const Topbar: React.FC<TopbarProps> = ({ onToggleMobileMenu }) => {
 
           {/* Desktop Title & Live Connection Status Pill */}
           <div className="hidden md:flex items-center gap-3">
-            <h1 className="text-white font-bold text-base tracking-wide">
-              {isXtream ? (brand.logoText || brand.appName || 'Painel de Gestão') : 'Painel de Gestão'}
-            </h1>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#E50914] shadow-[0_0_8px_#E50914] animate-pulse"></span>
+              <h1 className="text-white font-extrabold text-base tracking-wide flex items-center gap-2">
+                <span>{brand.appName || 'MEGA TV PRO'}</span>
+                <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-[#E50914]/20 border border-[#E50914]/40 text-[#FF4D55] font-bold">
+                  PRO
+                </span>
+              </h1>
+            </div>
             {isDemo ? (
               <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-400" />
@@ -119,6 +125,18 @@ export const Topbar: React.FC<TopbarProps> = ({ onToggleMobileMenu }) => {
 
         {/* Right action icons */}
         <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+          {/* Quick TV WebPlayer Link */}
+          <a
+            href={brand.webPlayerUrl || 'https://megatv.lol'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#E50914]/15 border border-[#E50914]/30 hover:border-[#E50914] text-[#FF4D55] hover:text-white hover:bg-[#E50914] transition-all text-xs font-bold shadow-[0_0_15px_rgba(229,9,20,0.2)] group"
+            title="Abrir Portal Web Player & Smart TV (megatv.lol)"
+          >
+            <Tv className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+            <span>WebPlayer TV</span>
+          </a>
+
           {/* Prominent Credit Balance Pill */}
           {profile && (
             <div 
